@@ -199,8 +199,19 @@ html, body, [class*="css"] {
     line-height: 1.8;
 }
 
-div[data-testid="stProgress"] > div > div {
-    background-color: var(--accent);
+/* Progress bar track */
+div[data-testid="stProgress"] div[role="progressbar"] {
+    background-color: #343834 !important;
+    border-radius: 10px !important;
+    height: 10px !important;
+    overflow: hidden !important;
+}
+
+/* Progress bar fill */
+div[data-testid="stProgress"] div[role="progressbar"] > div {
+    background-color: #c6f36b !important;
+    border-radius: 10px !important;
+    height: 100% !important;
 }
 
 div.stDownloadButton > button {
