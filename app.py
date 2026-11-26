@@ -653,6 +653,7 @@ if uploaded_file is not None and job_description.strip():
     except Exception as error:
         st.error(
             "Something broke. The cat is investigating."
+            "Please try again."
         )
 
         st.exception(error)
