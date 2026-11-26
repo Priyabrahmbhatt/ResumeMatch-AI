@@ -1,4 +1,5 @@
 # ResumeMatch AI
+<img width="1301" height="837" alt="Screenshot 2026-11-26 at 12 11 02 PM" src="https://github.com/user-attachments/assets/a5fa7b31-7da9-4b84-afd2-fe4d58c678d7" />
 
 🚀 **Live Demo:** [Try ResumeMatch AI](https://resumematch-by-priya.streamlit.app)
 
