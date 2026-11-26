@@ -199,20 +199,7 @@ html, body, [class*="css"] {
     line-height: 1.8;
 }
 
-/* Progress bar track */
-div[data-testid="stProgress"] div[role="progressbar"] {
-    background-color: #343834 !important;
-    border-radius: 10px !important;
-    height: 10px !important;
-    overflow: hidden !important;
-}
 
-/* Progress bar fill */
-div[data-testid="stProgress"] div[role="progressbar"] > div {
-    background-color: #c6f36b !important;
-    border-radius: 10px !important;
-    height: 100% !important;
-}
 
 div.stDownloadButton > button {
     background: var(--accent);
@@ -253,7 +240,7 @@ def skill_badges(skills, kind):
 
 
 def cat_reaction(coverage):
-    face = " /\\_/\\\\\n( o.o )\n > ^ <"
+    face = " /\\_/\\\\\n( o.o )\n> ^ <"
 
     if coverage >= 80:
         return face, "okay. you cooked."
@@ -393,8 +380,46 @@ if uploaded_file is not None and job_description.strip():
             unsafe_allow_html=True
         )
 
-        st.progress(
-            max(0.0, min(1.0, similarity_score))
+        progress_percentage = max(0.0, min(100.0, similarity_score * 100))
+
+        st.markdown(
+
+            f"""
+
+            <div style="
+
+                width: 100%;
+
+                background-color: #343834;
+
+                border-radius: 10px;
+
+                height: 10px;
+
+                overflow: hidden;
+
+                margin: 12px 0 20px 0;
+
+            ">
+
+                <div style="
+
+                    width: {progress_percentage:.1f}%;
+
+                    background-color: #c6f36b;
+
+                    height: 100%;
+
+                    border-radius: 10px;
+
+                "></div>
+
+            </div>
+
+            """,
+
+            unsafe_allow_html=True
+
         )
 
         with st.expander("what do these numbers mean?"):
