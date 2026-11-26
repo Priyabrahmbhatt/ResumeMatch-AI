@@ -1,8 +1,14 @@
 # ResumeMatch AI
 
+🚀 **Live Demo:** [Try ResumeMatch AI](https://resumematch-by-priya.streamlit.app)
+
+💻 **Source Code:** [GitHub Repository](https://github.com/Priyabrahmbhatt/ResumeMatch-AI)
+
 An AI-powered resume analysis application that compares a PDF resume with a job description to identify matching skills, missing skills, and semantic similarity.
 
 Built with Python, Streamlit, and Sentence Transformers.
+
+
 
 ## Features
 
